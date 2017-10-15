@@ -28,7 +28,8 @@ function onLoadHome() {
   var html = "";
   /** Get the meetings data into array, format it to display.*/
   //$.getJSON('https://area72aa.org/wp-admin/admin-ajax.php?action=meetings', function( data ) {
-  $.getJSON('meetings.json', function( data ) {
+    /** NOTE: meetings file is downloaded from a cronjob from the area 72 website. */
+  $.getJSON('meetings', function( data ) {
     html += '<table class="table"><thead><tr><th>Meeting</th><th>Location</th><th>Time</th><th>Day</th></th></thead><tbody>';
     //Building the meetings list
     data.forEach(function(element, i) {
