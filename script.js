@@ -23,10 +23,8 @@ function buildMeetingsTable(sortField) {
     filteredData = filteredData.sort(sortFunction[sortField]); //sort based on function we're building.
     filteredData = Array.from(filteredData); //create array so we can iterate with forEach.
     filteredData.forEach(function(element, i) {
-        
           html += "<tr><td>" + element['name'] + "</td><td>" +  element['location'] + "<br>" + element['formatted_address'] + "</td><td>" + element['time_formatted'] +  "</td><td>" + days[element['day']] + "</td></tr>";
-        
-      });
+      }); //Builds the table rows by iterating through filteredData array
     html += "</tbody></table>";
     $("#home-meetings").append(html);
     $("#home-meetings-loading").hide();
