@@ -1,7 +1,8 @@
 
 function onLoadHome() {
   //debugger;
-  buildMeetingsTable('time');
+  //initial build meetings table
+  buildMeetingsTable('day');
 };
 
 function buildMeetingsTable(sortField) {
