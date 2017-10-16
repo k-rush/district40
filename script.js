@@ -16,7 +16,7 @@ function buildMeetingsTable(sortField) {
   $.getJSON('meetings', function( data ) {
     var filteredData = $(data).filter(function(i,n) {return n.notes === "District 40"});
 
-    console.log(filteredData);
+    //console.log(filteredData);
     //console.log(filteredData.sort(sortMeetingsByTime));
     html += '<table class="table"><thead><tr><th class="sort-header" id="name-header">Meeting</th><th id="location-header">Location</th><th class="sort-header" id="time-header">Time</th><th class="sort-header" id="day-header">Day</th></thead><tbody>';
     //Building the meetings list
