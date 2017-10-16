@@ -97,6 +97,7 @@
 #home th {
 	border-bottom: 1px solid black;
 	text-align: left;
+	font-weight:normal;
 }
 
 #home td {
