@@ -23,14 +23,11 @@
 
 function onLoadHome() {
   //debugger;
-
-  
   buildMeetingsTable(sortMeetingsByTime);
-
-
 };
 
-function buildMeetingsTable(sortField) {
+function buildMeetingsTable(sortFunction) {
+  $("#home-meetings").html(''); //clear what's there.
   var days = {'0':'Sunday','1':'Monday','2':'Tuesday','3':'Wednesday','4':'Thursday','5':'Friday','6':'Saturday'};
   var html = "";
   /** Get the meetings data into array, format it to display.*/
@@ -41,10 +38,10 @@ function buildMeetingsTable(sortField) {
 
     console.log(filteredData);
     //console.log(filteredData.sort(sortMeetingsByTime));
-    html += '<table class="table"><thead><tr><th>Meeting</th><th>Location</th><th>Time</th><th>Day</th></th></thead><tbody>';
+    html += '<table class="table"><thead><tr><th id="name-header">Meeting</th><th id="location-header">Location</th><th id="time-header">Time</th><th id="day-header">Day</th></thead><tbody>';
     //Building the meetings list
-    filteredData = filteredData.sort(sortField);
-    filteredData = Array.from(filteredData);
+    filteredData = filteredData.sort(sortFunction); //sort based on function we're building.
+    filteredData = Array.from(filteredData); //create array so we can iterate with forEach.
     filteredData.forEach(function(element, i) {
         
           html += "<tr><td>" + element['name'] + "</td><td>" +  element['location'] + "<br>" + element['formatted_address'] + "</td><td>" + element['time_formatted'] +  "</td><td>" + days[element['day']] + "</td></tr>";
@@ -53,7 +50,19 @@ function buildMeetingsTable(sortField) {
     html += "</tbody></table>";
     $("#home-meetings").append(html);
     $("#home-meetings-loading").hide();
+    $("#name-header").on("click", function(event) {
+      buildMeetingsTable(sortMeetingsByName);
+      event.stopPropogation();
+    });
+    $("#day-header").bind("click", function(event) {
+      buildMeetingsTable(sortMeetingsByDay);
+      event.stopPropogation();
+    });
 
+    $("#time-header").bind("click", function(event) {
+      buildMeetingsTable(sortMeetingsByTime);
+      event.stopPropogation();
+    });
   });
 };
 
