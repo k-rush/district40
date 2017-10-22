@@ -7,6 +7,12 @@
    	font-weight: 300;
    }
 
+div#content-container {
+    height: -webkit-calc(100vh - 130px);
+    height: -moz-calc(100vh - 130px);
+  	height: calc(100vh - 130px);
+}
+
 #header a:link, a:visited {  
 	color:#000;
 }
@@ -72,7 +78,7 @@
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    	font-weight: 300;
 	background: #fff;
-	padding-top:5%;
+	padding-top:2%;
 	height:100%;
 }
 #home h1, h2{
@@ -86,12 +92,13 @@
 #home h2 {
 	font-size: 20px;
 	line-height: normal;
+
 }
 
 #home #home-meetings {
 	/* for visual troubleshooting  border:1px solid red; */
 	overflow-y:scroll;
-	max-height:400px;
+	max-height:-webkit-fill-available;
 }
 
 #home th {
@@ -117,7 +124,7 @@
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    	font-weight: 300;
 	background: #fff;
-	padding-top:5%;
+	padding-top:2%;
 	height:100%;
 }
 #home-events h1 {
