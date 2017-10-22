@@ -131,13 +131,15 @@ function onLoadEvents() {
       header: {
         left: 'prev,next',
         center: 'title',
-        right: 'month,listMonth'
+        right: 'listYear,month'
       },
       
       googleCalendarApiKey: 'AIzaSyCWpIKSa_JHQWRxrQwc8ToBv6qVr3FZ5d0',
     
       events: 'cokqd4dp5giqibfd52fn50pcbc@group.calendar.google.com',
       
+      defaultView: 'listYear',
+
       eventClick: function(event) {
         // opens events in a popup window
         window.open(event.url, 'gcalevent', 'width=700,height=600');
