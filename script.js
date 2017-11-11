@@ -185,11 +185,13 @@ $(function() {
         });
 
       }
-      /** boldify nav links */
-      $(".update-content").css("font-weight","normal");
-      if (url == "home.html")  $("#navHome").css("font-weight","bold");
-      else if (url == "events.html")  $("#navEvents").css("font-weight","bold");
-      else if (url == "contact.html")  $("#navContact").css("font-weight","bold");
+
+      /* When new link is selected, make it bold.  Make all others normal. */
+      $(".update-content").each(function(index) {
+        if(this.hash.replace("#","") == url) $(this).css("font-weight","bold");
+        else $(this).css("font-weight","normal");
+      });
+
     });
 
 
