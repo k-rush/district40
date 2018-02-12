@@ -111,8 +111,7 @@ html {
   }
 }
 body {
-    background-image: url("../images/dust_scratches.png");
-    background-repeat: repeat;
+
   font-size: 1em;
   line-height: 1.625em;
   -webkit-font-smoothing: antialiased;
@@ -1499,7 +1498,7 @@ nav {
   user-select: none;
   -webkit-user-select: none;
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 768px) {
   .nav-bar {
     height: auto;
     overflow: hidden;
@@ -1593,7 +1592,7 @@ nav {
 nav:not(.nav--fixed):not(.nav--absolute) {
   position: relative;
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 768px) {
   .nav-bar.nav--absolute,
   .nav-bar.nav--fixed {
     position: relative;

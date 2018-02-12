@@ -2,3 +2,24 @@
 Add your custom styles below
 ****************************/
 
+#home-events {
+	padding-top:10px;
+}
+
+#location-header {
+	font-weight:normal;
+}
+@media all and (min-width: 767px) {
+	#content-container {
+        padding-left:5%;
+    	padding-right: 5%;
+	}
+}
+
+#content-container {
+    background-image: url("../images/dust_scratches.png");
+    background-repeat: repeat;
+
+}
+
+

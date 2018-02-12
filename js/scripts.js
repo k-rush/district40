@@ -1627,6 +1627,7 @@ function buildMeetingsTable(sortField) {
       buildMeetingsTable('day');
       $("#day-header").css("font-weight", "bold");
       //event.stopPropogation();
+      $("#day-header").append("&#8595;");
     });
 
     $("#time-header").bind("click", function(event) {
@@ -1710,6 +1711,7 @@ function sortMeetingsByTime(a,b) {
 function onLoadEvents() {
   /** Full calendarize the full calendar. */
   $('#calendar').fullCalendar({
+      themeSystem: 'bootstrap3',
       header: {
         left: 'prev,next',
         center: 'title',
@@ -1733,5 +1735,5 @@ function onLoadEvents() {
       }
       
     });
-  
+
 };
