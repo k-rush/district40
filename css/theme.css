@@ -110,6 +110,8 @@ html {
   }
 }
 body {
+    background-image: url("../images/dust_scratches.png");
+    background-repeat: repeat;
   font-size: 1em;
   line-height: 1.625em;
   -webkit-font-smoothing: antialiased;
@@ -870,6 +872,8 @@ div[data-overlay] ul {
 }
 /**! 7. Colors **/
 body {
+  background-image: url("../images/dust_scratches.png");
+    background-repeat: repeat;
   background: #f8f8f8;
 }
 .color--primary {
@@ -1308,8 +1312,6 @@ ul:last-child {
 }
 /**! 12. Nav Bar **/
 nav {
-  background-image: url("../images/creampaper.png");
-    background-repeat: repeat;
   z-index: 10;
 }
 .nav-bar {
@@ -1387,7 +1389,7 @@ nav {
 .menu > li {
   position: relative;
   float: left;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;

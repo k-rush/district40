@@ -1621,18 +1621,18 @@ function buildMeetingsTable(sortField) {
     /* Bind sorting click events to the table headers.  Will rebuild table. */
     $("#name-header").on("click", function(event) {
       buildMeetingsTable('name');
-      event.stopPropogation();
+      //event.stopPropogation();
     });
     $("#day-header").bind("click", function(event) {
       buildMeetingsTable('day');
       $("#day-header").css("font-weight", "bold");
-      event.stopPropogation();
+      //event.stopPropogation();
     });
 
     $("#time-header").bind("click", function(event) {
       buildMeetingsTable('time');
       $("#day-header").css("font-weight", "bold");
-      event.stopPropogation();
+      //event.stopPropogation();
     });
 
   });
