@@ -103,6 +103,7 @@ div.left {
 /**! 3. Typography **/
 html {
   font-size: 100%;
+
 }
 @media all and (max-width: 768px) {
   html {
@@ -119,6 +120,7 @@ body {
   font-family: 'Lora', 'Helvetica', 'Arial', sans-serif;
   color: #767676;
   font-weight: 400;
+    height:100%;
 }
 h1,
 h2,
